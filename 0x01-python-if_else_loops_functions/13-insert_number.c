@@ -7,3 +7,19 @@
  * @number: index of the list where the new node is
  * added.
  * Return: the address of the new node, or NULL if it
+ * failed.
+ */
+listint_t *insert_node(listint_t **head, int number)
+{
+listint_t *new;
+listint_t *h;
+listint_t *h_prev;
+
+h = *head;
+new = malloc(sizeof(listint_t));
+
+if (new == NULL)
+return (NULL);
+
+while (h != NULL)
+{
